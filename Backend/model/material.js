@@ -8,7 +8,7 @@ const material = Schema({
         type: String,
         required: true
     },
-    levelId :{
+    subjectId :{
         type: ObjectID,
         
     },

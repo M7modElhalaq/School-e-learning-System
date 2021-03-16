@@ -2,25 +2,25 @@ const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Level = Schema({
+const Subject = Schema({
     
-    levelName :{
+    subjectName :{
         type: String,
         required: true
     },
-    levelBranch :{
-        type: String,
+    grade :{
+        type: Number,
         required: true
     },
     levelId :{
         type: ObjectID,
         required: true
     },
-    teacherId :{
-        type: ObjectID,
+    created_Date :{
+        type: Date,
         required: true
     },
    
 })
-const Level_model = mongoose.model('Level_model', Level);
-module.exports = Level_model;
+const Subject_model = mongoose.model('Subject_model', Subject);
+module.exports = Subject_model;

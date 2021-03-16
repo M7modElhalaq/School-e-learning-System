@@ -2,13 +2,9 @@ const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Section = Schema({
+const Mark = Schema({
     
     studentID :{
-        type: ObjectID,
-        required: true
-    },
-    teacherID :{
         type: ObjectID,
         required: true
     },
@@ -16,12 +12,20 @@ const Section = Schema({
         type: ObjectID,
         required: true
     },
-    sectionName :{
-        type: String,
+    firstExamMark :{
+        type: Number,
         required: true
     },
-    semester :{
-        type: String,
+    midtermExamMark :{
+        type: Number,
+        required: true
+    },
+    finalExamMark :{
+        type: Number,
+        required: true
+    },
+    activityMark :{
+        type: Number,
         required: true
     },
     created_Date :{
@@ -29,5 +33,5 @@ const Section = Schema({
         required: true
     },
 })
-const Section_model = mongoose.model('Section_model', Section);
-module.exports = Section_model;
+const Mark_model = mongoose.model('Mark_model', Section);
+module.exports = Mark_model;

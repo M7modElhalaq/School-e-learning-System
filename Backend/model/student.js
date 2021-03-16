@@ -37,7 +37,11 @@ const Student = Schema({
     gender:{
         type: String,
     },
-    level_id:{
+    level:{
+        type: Number,
+        required: true
+    },
+    grade:{
         type: Number,
         required: true
     },

@@ -8,19 +8,15 @@ const Subject = Schema({
         type: String,
         required: true
     },
-    grade :{
-        type: Number,
+    subject: {
+        type: String,
         required: true
     },
-    levelId :{
-        type: ObjectID,
-        required: true
-    },
-    created_Date :{
-        type: Date,
+    level :{
+        type: String,
         required: true
     },
    
-})
+}, { timestamps: true })
 const Subject_model = mongoose.model('Subject_model', Subject);
 module.exports = Subject_model;

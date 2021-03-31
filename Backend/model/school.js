@@ -19,14 +19,10 @@ const School = Schema({
         type: ObjectID,
         required: true
     },
-    PHONENUMBER :{
+    phone_number :{
         type: Number,
         required: true
-    },
-    created_Date :{
-        type: Date,
-        required: true
-    },
-})
+    }
+}, { timestamps: true })
 const Schoolmode = mongoose.model('School', School);
 module.exports = Schoolmode;

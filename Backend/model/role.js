@@ -6,6 +6,7 @@ const role = Schema({
 
     name: {
         type: String,
+        unique: [true, 'Role Already exist'],
         required: true
     },
     permissions_id: {

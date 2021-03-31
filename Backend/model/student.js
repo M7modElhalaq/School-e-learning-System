@@ -19,40 +19,22 @@ const Student = Schema({
         type: String,
         required: true
     },
-    managerId :{
-        type: ObjectID,
-        required: true
-    },
-    PHONENUMBER :{
+    phone_number :{
         type: Number,
         required: true
     },
-    birthDay_Date :{
+    birthday_date :{
         type: Date,
         required: true
-    },
-    address:{
-        type: String,
     },
     gender:{
         type: String,
     },
-    level:{
-        type: Number,
-        required: true
-    },
-    grade:{
-        type: Number,
-        required: true
-    },
     class_id:{
-        type: String,
-        required: true
-    },
-    created_at:{
-        type:Date,
+        type: ObjectID,
         required: true
     }
-})
+}, { timestamps: true })
+
 const Studentmode = mongoose.model('Studentmode', Student);
 module.exports = Studentmode;

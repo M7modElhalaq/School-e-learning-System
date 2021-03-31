@@ -2,9 +2,9 @@ const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Section = Schema({
+const ClassRoom = Schema({
     
-    studentID :{
+    classID :{
         type: ObjectID,
         required: true
     },
@@ -24,10 +24,6 @@ const Section = Schema({
         type: String,
         required: true
     },
-    created_Date :{
-        type: Date,
-        required: true
-    },
-})
-const Section_model = mongoose.model('Section_model', Section);
-module.exports = Section_model;
+}, { timestamps: true })
+const ClassRoom_model = mongoose.model('ClassRoom', Section);
+module.exports = ClassRoom_model;

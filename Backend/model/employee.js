@@ -18,7 +18,6 @@ const employee = Schema({
     },
     role_Id :{
         type: ObjectID,
-        required: true
     },
     job_Number :{
         type: Number,

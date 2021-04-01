@@ -9,8 +9,7 @@ const Subject = Schema({
         required: true
     },
     subject: {
-        type: String,
-        required: true
+        type: Buffer
     },
     level :{
         type: String,
@@ -19,4 +18,5 @@ const Subject = Schema({
    
 }, { timestamps: true })
 const Subject_model = mongoose.model('Subject_model', Subject);
-module.exports = Subject_model;
+exports.Subject_model = Subject_model
+exports.Subjectschema = Subject;

@@ -7,6 +7,7 @@ const AuthRoutes = require('../routes/AuthRoutes');
 const RoleRoutes = require('../routes/RoleRoutes');
 const SubjectRoutes = require('../routes/SubjectRoutes');
 const EmployeeRoutes = require('../routes/EmployeeRoutes');
+const StudentRoutes = require('../routes/StudentRoutes');
 var app = express();
 
 app.engine('html', require('ejs').renderFile);
@@ -47,6 +48,9 @@ app.use('/subject', SubjectRoutes);
 
 // Employee Routes
 app.use('/employee', EmployeeRoutes);
+
+// Student Routes
+app.use('/student', StudentRoutes);
 
 
 let port = process.env.PORT || 8000;

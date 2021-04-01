@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const parent = Schema({
+const parentschema = Schema({
     
     identification_number :{
         type: Number,
@@ -13,7 +13,6 @@ const parent = Schema({
     },
     full_name_en :{
         type: String,
-        required: true
     },
     Job :{
         type: String,
@@ -25,5 +24,6 @@ const parent = Schema({
     },
    
 })
-const parent_model = mongoose.model('parent_model', parent);
-module.exports = parent_model;
+const parent_model = mongoose.model('parent_model', parentschema);
+exports.parent_model = parent_model
+exports.parentschema = parentschema;

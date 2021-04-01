@@ -2,7 +2,7 @@ const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ClassRoom = Schema({
+const Section = Schema({
     
     classID :{
         type: ObjectID,
@@ -25,5 +25,6 @@ const ClassRoom = Schema({
         required: true
     },
 }, { timestamps: true })
-const ClassRoom_model = mongoose.model('ClassRoom', Section);
-module.exports = ClassRoom_model;
+const Section_model = mongoose.model('Section_model', Section);
+exports.Section_model = Section_model
+exports.Sectionschema = Section;

@@ -25,4 +25,5 @@ const School = Schema({
     }
 }, { timestamps: true })
 const Schoolmode = mongoose.model('School', School);
-module.exports = Schoolmode;
+exports.Schoolmode = Schoolmode
+exports.Schoolschema = School;

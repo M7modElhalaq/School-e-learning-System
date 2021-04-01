@@ -16,4 +16,5 @@ const role = Schema({
 
 })
 const role_model = mongoose.model('role_model', role);
-module.exports = role_model;
+exports.role_model = role_model
+exports.roleschema = role;

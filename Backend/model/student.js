@@ -1,15 +1,17 @@
-const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
+const { ObjectID } = require('bson');
+const parent = require('./parent').parentschema
+const classschema = require('./class').Classschema
+
 const Schema = mongoose.Schema;
 
-const Student = Schema({
+const Studentschema = Schema({
     identification_number :{
         type: Number,
         required: true
     },
-    parent_id :{
-        type: ObjectID,
-        required: true
+    parent :{
+        type:  parent,
     },
     full_name_ar :{
         type: String,
@@ -29,12 +31,24 @@ const Student = Schema({
     },
     gender:{
         type: String,
+        require:true
     },
-    class_id:{
-        type: ObjectID,
-        required: true
+    classforignkey:{
+        type: classschema,
+    },
+    address :{
+        type: String,
+        require : true
+    },
+    nationality:{
+        type : String
+    },
+    religion:{
+        type : String
     }
+
 }, { timestamps: true })
 
-const Studentmode = mongoose.model('Studentmode', Student);
-module.exports = Studentmode;
+const Studentmode = mongoose.model('Studentmode', Studentschema);
+exports.Studentmode = Studentmode
+exports.Studentschema = Studentschema;

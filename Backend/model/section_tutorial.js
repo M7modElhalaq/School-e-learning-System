@@ -22,4 +22,5 @@ const Section_tutorial = Schema({
     },
 })
 const Section_tutorial_model = mongoose.model('Section_tutorial_model', Section_tutorial);
-module.exports = Section_tutorial_model;
+exports.Section_tutorial_model = Section_tutorial_model
+exports.Section_tutorial = Section_tutorial;

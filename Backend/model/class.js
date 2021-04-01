@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Class = Schema({
-    level :{
+const Classschema = Schema({
+    room :{
         type: String,
         required: true
     },
     branch :{
         type: String,
-        required: true
     },
     grade :{
-        type: Number,
+        type: String,
         required: true
     }
 }, { timestamps: true })
-const Class_model = mongoose.model('Class_model', Class);
-module.exports = Class_model;
+const Class_model = mongoose.model('Class_model', Classschema);
+exports.Class_model = Class_model
+exports.Classschema = Classschema;

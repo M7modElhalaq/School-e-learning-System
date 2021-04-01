@@ -1,26 +1,5 @@
 const employee_model = require('../model/employee');
 const xlsxFile = require('read-excel-file/node');
-const Permissions = require('../model/permission');
-const validUrl = require('valid-url');
-
-const handleError = (err) => {
-    const errors = {  };
-
-    // Duplicate error code
-    if(err.code === 11000) {
-        errors.email = 'Role name already exist';
-        return errors;
-    }
-
-    // Validations Errors
-    if(err.message.includes('permissions_model validation failed')) {
-        Object.values(err.errors).forEach(({properties}) => {
-            errors[properties.path] = properties.message;
-        });
-    }
-
-    return errors;
-};
 
 const employee_index = (req,res) => {
     res.send('employees Index Page');

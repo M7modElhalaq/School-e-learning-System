@@ -22,5 +22,6 @@ const sub_material = Schema({
     },
    
 })
-const sub_material_model = mongoose.model('sub_material_model', material);
-module.exports= sub_material_model;
+const sub_material_model = mongoose.model('sub_material_model', sub_material);
+exports.sub_material_model = sub_material_model
+exports.sub_materialschema = sub_material;

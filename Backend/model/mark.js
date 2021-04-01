@@ -33,5 +33,6 @@ const Mark = Schema({
         required: true
     },
 })
-const Mark_model = mongoose.model('Mark_model', Section);
-module.exports = Mark_model;
+const Mark_model = mongoose.model('Mark_model', Mark);
+exports.Mark_model = Mark_model
+exports.Markschema = Mark;

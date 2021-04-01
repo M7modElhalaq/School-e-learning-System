@@ -18,6 +18,7 @@ const employee = Schema({
     },
     role_Id :{
         type: ObjectID,
+     
     },
     job_Number :{
         type: Number,
@@ -51,4 +52,5 @@ const employee = Schema({
    
 })
 const employee_model = mongoose.model('employee_model', employee);
-module.exports = employee_model;
+exports.employee_model = employee_model
+exports.employeeschema = employee
